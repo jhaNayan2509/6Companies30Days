@@ -3,7 +3,7 @@
 class Solution {
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack=new Stack();
-        String oprtr="+-*/"
+        String oprtr="+-*/";
         for(String s:tokens)
         {
             if(oprtr.contains(s)&&!stack.isEmpty()){
