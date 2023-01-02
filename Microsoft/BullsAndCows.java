@@ -14,4 +14,4 @@ class Solution {
     return bulls + "A" + cows + "B";
 }
 }
-/*Submission Link:: https://leetcode.com/problems/bulls-and-cows/submissions/869620466/ */
+/*Submission Link--> https://leetcode.com/problems/bulls-and-cows/submissions/869620466/ */
