@@ -2,29 +2,32 @@
 
 class Solution {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> stack=new Stack();
-        String oprtr="+-*/";
-        for(String s:tokens)
-        {
-            if(oprtr.contains(s)&&!stack.isEmpty()){
-              int op1=stack.pop();
-              int op2=stack.pop();
-              int ans=help(op2,s,op1);
-              stack.push(ans);
-            }else{
-                stack.push(Integer.parseInt(s));
-            }
-        }
-        return stack.pop();
-
-    }
-    public int help(int op2,String s,int op1)
-    {
-        if(s.equals("+"))return op2+op1;
-        else if(s.equals("-"))return op2-op1;
-        else if(s.equals("/"))return op2/op1;
-        return op2*op1;
+       Stack<Integer> s = new Stack<>();
+       int val1,val2;
+       for(int i=0;i<tokens.length;i++){
+           switch(tokens[i]){
+               case "+":
+                s.push(s.pop()+s.pop());
+                break;
+               case "-":
+               val1 = s.pop();
+               val2 = s.pop();
+               s.push(val2-val1);
+               break;
+               case "*":
+                s.push(s.pop()*s.pop());
+               break;
+               case"/":
+                val1 = s.pop();
+               val2 = s.pop();
+               s.push(val2/val1);
+               break;
+               default:
+               s.push(Integer.parseInt(tokens[i]));
+           }
+       }
+       return s.pop();
     }
 }
 
-/*Submission Link: https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/869126979/ */
+/*Submission Link: https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/869681423/ */
