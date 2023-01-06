@@ -1,5 +1,5 @@
 /*Topic : Maths */
-//Approach: if all four sides are equal and two diagonal are of equal sides then it is a valid square
+//Approach: if all four sides are equal and two diagonals are of equal length then it is a valid square
 
 class Solution {
     public boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {
@@ -19,6 +19,7 @@ class Solution {
         }
         
         int count1 = 0, count2 = 0;
+        
         for(int i=0;i<6;i++){
             if(arr[i] == min) count1++;
             else if(arr[i] == 2 * min) count2++;
