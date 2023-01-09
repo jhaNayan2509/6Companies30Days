@@ -1,6 +1,4 @@
-/*
- * Related Topics : DP
- */
+/*Related Topics : DP*/
 class Solution {
     public int peopleAwareOfSecret(int n, int delay, int forget) {
         long mod = 1000000007L;
