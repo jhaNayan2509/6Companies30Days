@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public List<String> invalidTransactions(String[] transactions) {
         List<String> res = new ArrayList<>();
         int n = transactions.length;
