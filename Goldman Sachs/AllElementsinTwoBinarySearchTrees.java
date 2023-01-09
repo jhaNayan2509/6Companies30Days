@@ -1,4 +1,4 @@
-/*Related Topic: Tree,DFS,BFS,etc. */
+/*Related Topic: Tree,DFS,BFS,etc.*/
 class Solution {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
 
